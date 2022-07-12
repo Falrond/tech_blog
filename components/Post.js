@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/dist/client/image";
 import CategoryLabel from "./CategoryLabel";
 
-export default function Post({ post, compact }) {
+export default function Post({ post, compact, setExpanded, setSearchTerm }) {
   return (
     <div className="w-11/12 sm:w-full mx-auto rounded-lg shadow-xl mt-6 bg-base-300 ">
       {!compact && (
@@ -23,7 +23,15 @@ export default function Post({ post, compact }) {
 
         <div className="mt-2">
           <Link href={`/blog/${post.slug}`}>
-            <a className="text-2xl font-bold hover:underline">
+            <a
+              onClick={() => {
+                if (compact) {
+                  setExpanded(false);
+                  setSearchTerm("");
+                }
+              }}
+              className="text-2xl font-bold hover:underline"
+            >
               {post.frontmatter.title}
             </a>
           </Link>

@@ -37,7 +37,7 @@ export default function Search() {
         <div className="relative text-gray-600 w-72">
           <form>
             <input
-              onBlur={close}
+              // onBlur={close}
               onFocus={expand}
               type="search"
               name="search"
@@ -52,7 +52,14 @@ export default function Search() {
           </form>
         </div>
       </div>
-      {expanded ? <SearchResults results={searchResults} /> : null}
+      {expanded ? (
+        <SearchResults
+          results={searchResults}
+          expanded={expanded}
+          setExpanded={setExpanded}
+          setSearchTerm={setSearchTerm}
+        />
+      ) : null}
     </div>
   );
 }
