@@ -10,7 +10,7 @@ export default function Header() {
           <a className="flex md:w-1/5 items-center text- md:justify-start mb-4 md:mb-0">
             <Image src="/images/logo.png" width={40} height={40} alt="logo" />
             <span className="ml-3 text-xl font-semibold">
-              Coding<span className="text-accent">Bay</span>{" "}
+              CODE<span className="text-accent">ADO</span>{" "}
             </span>
           </a>
         </Link>

@@ -4,6 +4,7 @@ import Post from "@/components/Post";
 import { getPosts } from "@/lib/posts";
 
 export default function HomePage({ posts }) {
+  console.log(posts);
   return (
     <Layout>
       <h1 className="text-5xl py-5 border-b-2 border-accent">
