@@ -32,7 +32,5 @@ export default function handler(req, res) {
       category.toLowerCase().indexOf(req.query.q) != -1
   );
 
-  console.log(results);
-
   res.status(200).json(results);
 }

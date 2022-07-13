@@ -7,7 +7,7 @@ import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkHtml from "remark-html";
 import ReactMarkdown from "react-markdown";
-import CodeBlock from "@/components/codeblock";
+import CodeBlock from "@/components/Codeblock";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
