@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaSearch } from "react-icons/fa";
 import SearchResults from "./SearchResults";
 
@@ -7,6 +7,7 @@ export default function Search() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [expanded, setExpanded] = useState(false);
+  const searchBarRef = useRef();
 
   function close() {
     setExpanded(false);
@@ -38,6 +39,7 @@ export default function Search() {
           <form>
             <input
               // onBlur={close}
+              ref={searchBarRef}
               onFocus={expand}
               type="search"
               name="search"
@@ -56,6 +58,7 @@ export default function Search() {
         <SearchResults
           results={searchResults}
           expanded={expanded}
+          searchBarRef={searchBarRef}
           setExpanded={setExpanded}
           setSearchTerm={setSearchTerm}
         />
