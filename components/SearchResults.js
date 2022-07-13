@@ -27,7 +27,7 @@ export default function SearchResults({
       ref={myRef}
       className="absolute top-20 right-0 md:right-10 z-10  bg-neutral w-full md:w-4/12 rounded-2xl"
     >
-      <div className="p-10">
+      <div className="px-6 pb-6">
         {/* <h2 className="text-3xl mb-3">{results.length} Wyniki</h2> */}
         {results.map((result, index) => (
           <Post

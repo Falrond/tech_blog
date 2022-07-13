@@ -39,7 +39,7 @@ export default function Post({ post, compact, setExpanded, setSearchTerm }) {
         </div>
         {!compact && (
           <div className="flex justify-between items-center mt-2">
-            <Link href={`blog/${post.slug}`}>
+            <Link href={`/blog/${post.slug}`}>
               <a className="font-semibold text-accent hover:text-accent-focus ">
                 Przeczytaj więcej
               </a>
