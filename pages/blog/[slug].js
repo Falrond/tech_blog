@@ -29,8 +29,8 @@ export default function PostPage({
         </Link>
       </div>
 
-      <div className="lg:w-7/12 w-11/12  mx-auto px-8 py-6 bg-base-300 rounded-md shadow-md ">
-        <h1 className="text-5xl">{title}</h1>
+      <div className="lg:w-7/12 w-full mx-auto px-6 py-6 bg-base-300 sm:rounded-md shadow-md ">
+        <h1 className="text-4xl sm:text-5xl">{title}</h1>
         <div className="flex justify-between items-center my-4">
           <div className="font-bold">{date}</div>
           <CategoryLabel>{category}</CategoryLabel>
@@ -38,12 +38,12 @@ export default function PostPage({
         <img
           src={cover_image}
           alt=""
-          className="w-full rounded h-96 object-cover"
+          className="w-full rounded h-52 sm:h-96 object-cover"
         />
 
         <div className="blog-text mt-8">
           {/* <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div> */}
-          <article className="prose prose-2xl mx-auto">
+          <article className="prose prose-md sm:prose-2xl mx-auto">
             <ReactMarkdown components={CodeBlock}>{content}</ReactMarkdown>
             {/* <ReactMarkdown>{content}</ReactMarkdown> */}
           </article>
