@@ -39,6 +39,17 @@ export const posts = [
     },
   },
   {
+    slug: "operatory-porownania-w-javascript",
+    frontmatter: {
+      title: "Operatory porównania w JavaScript",
+      date: "July 14, 2022",
+      excerpt:
+        "Operatory porównania, inaczej nazywane operatorami relacyjnymi, bardzo często wykorzystuje się w instrukcjach warunkowych w JavaScripcie",
+      cover_image: "/images/posts/operatory-porownania.jpg",
+      category: "JavaScript",
+    },
+  },
+  {
     slug: "python-book-review",
     frontmatter: {
       title: "Python Book Review",
