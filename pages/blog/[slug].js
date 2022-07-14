@@ -20,15 +20,16 @@ export default function PostPage({
 }) {
   return (
     <Layout title={title}>
-      <div className="lg:w-9/12 w-11/12  mx-auto">
+      <div className="lg:w-7/12 w-11/12  mx-auto">
         <Link href="/blog">
-          <a className="cursor-pointer hover:text-accent inline-block">
-            <FaLongArrowAltLeft size={30} />
-          </a>
+          <button className="btn btn-accent mb-5  font-bold">
+            {/* <FaLongArrowAltLeft size={30} /> */}
+            Wróć
+          </button>
         </Link>
       </div>
 
-      <div className="lg:w-9/12 w-11/12  mx-auto px-8 py-6 bg-base-300 rounded-md shadow-md ">
+      <div className="lg:w-7/12 w-11/12  mx-auto px-8 py-6 bg-base-300 rounded-md shadow-md ">
         <h1 className="text-5xl">{title}</h1>
         <div className="flex justify-between items-center my-4">
           <div className="font-bold">{date}</div>
@@ -42,7 +43,10 @@ export default function PostPage({
 
         <div className="blog-text mt-8">
           {/* <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div> */}
-          <ReactMarkdown components={CodeBlock}>{content}</ReactMarkdown>
+          <article className="prose prose-2xl mx-auto">
+            <ReactMarkdown components={CodeBlock}>{content}</ReactMarkdown>
+            {/* <ReactMarkdown>{content}</ReactMarkdown> */}
+          </article>
         </div>
       </div>
     </Layout>

@@ -8,7 +8,7 @@ const CodeBlock = {
     return !inline && match ? (
       <SyntaxHighlighter
         style={dracula}
-        showLineNumbers={true}
+        // showLineNumbers={true}
         language={match[1]}
         PreTag="div"
         {...props}
