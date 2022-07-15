@@ -35,7 +35,7 @@ console.log(a === 10); //true
 console.log(a === "10"); //false - ponieważ '10' jest typem string a nie number
 ```
 
-Więcej problemów sprawia natomiast operator `==`. Tutaj występuje tzw. **niejawna konwersja typów**, która polega na zamiane typu który jest po prawej stronie do typu który znajduję się po stronie lewej.
+Więcej problemów sprawia natomiast operator `==`. Tutaj występuje tzw. **niejawna konwersja typów** (więcej o konwersji przeczytasz <a href="/blog/konwersja-i-koercja-w-javascript" target="_blank" rel="noopener">tu</a>), która polega na zamiane typu który jest po prawej stronie do typu który znajduję się po stronie lewej.
 
 ```js
 console.log(a == 10); //true
@@ -89,4 +89,4 @@ Podsumowując, najlepiej używać potrójnego operatora `===` oraz stosować jaw
 console.log(true === Boolean("true")); // true
 ```
 
-Operator `===` sprawdza czy wartości są takie same oraz czy mają ten sam typ. Nie zachodzą tutaj żadne niejawne konwersje a my unikniemy tym samym weielu problemów.
+Operator `===` sprawdza czy wartości są takie same oraz czy mają ten sam typ. Nie zachodzą tutaj żadne niejawne konwersje a my unikniemy tym samym wielu problemów.

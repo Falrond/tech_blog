@@ -7,6 +7,7 @@ import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkHtml from "remark-html";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import CodeBlock from "@/components/Codeblock";
 import fs from "fs";
 import path from "path";
@@ -44,7 +45,9 @@ export default function PostPage({
         <div className="blog-text mt-8">
           {/* <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div> */}
           <article className="prose prose-md sm:prose-2xl mx-auto">
-            <ReactMarkdown components={CodeBlock}>{content}</ReactMarkdown>
+            <ReactMarkdown components={CodeBlock} rehypePlugins={[rehypeRaw]}>
+              {content}
+            </ReactMarkdown>
             {/* <ReactMarkdown>{content}</ReactMarkdown> */}
           </article>
         </div>
