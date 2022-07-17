@@ -5,6 +5,7 @@ import CategoryLabel from "@/components/CategoryLabel";
 // import { marked } from "marked";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
+import remarkImages from "remark-images";
 import remarkHtml from "remark-html";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -80,6 +81,7 @@ export async function getStaticProps({ params: { slug } }) {
   const processedContent = await unified()
     .use(remarkParse)
     .use(remarkHtml)
+    .use(remarkImages)
     .process(content);
   const contentHtml = processedContent.toString();
   return {

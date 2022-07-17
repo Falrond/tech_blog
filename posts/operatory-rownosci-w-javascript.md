@@ -1,7 +1,7 @@
 ---
-title: "Operatory porównania w JavaScript"
+title: "Operatory równości w JavaScript"
 date: "July 14, 2022"
-excerpt: "Operatory porównania, inaczej nazywane operatorami relacyjnymi, bardzo często wykorzystuje się w instrukcjach warunkowych w JavaScripcie"
+excerpt: "Jakie różnice występują pomiędzy operatorami == i === w JavaScripcie"
 cover_image: "/images/posts/operatory-porownania.jpg"
 category: "JavaScript"
 ---
@@ -19,7 +19,7 @@ console.log(a < 1); //false
 console.log(a <= 10); //true
 ```
 
-Przyjrzyjmy się dwóm szczególnym operatorom czyli operator podwójnego `==` oraz potrójnego `===` porównania.
+Dzisiaj przyjrzyjmy się dwóm operatorom równości czyli operator podwójnego `==` oraz potrójnego `===` porównania.
 
 ```js
 console.log(a === 10); //true
