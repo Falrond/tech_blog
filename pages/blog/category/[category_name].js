@@ -10,8 +10,8 @@ import { getPosts } from "@/lib/posts";
 export default function CategoryBlogPage({ posts, categoryName, categories }) {
   return (
     <Layout>
-      <div className="flex items-center justify-between border-b-2 border-accent">
-        <h1 className="text-5xl py-5">{categoryName}</h1>
+      <div className="flex mx-4 sm:mx-0 items-center justify-between border-b-2 border-accent">
+        <h1 className="sm:text-5xl text-4xl py-5">{categoryName}</h1>
         <CategoryList categories={categories} />
       </div>
       {/* <h1 className="text-5xl py-5 border-b-2 border-accent"></h1> */}

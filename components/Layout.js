@@ -11,7 +11,8 @@ export default function Layout({ title, children, keywords, description }) {
         <title>{title}</title>
         <meta name="keywords" content={keywords} />
         <meta name="description" content={description} />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/images/codersbay_logo.svg" />
       </Head>
       <Header />
       <Search />
@@ -22,7 +23,7 @@ export default function Layout({ title, children, keywords, description }) {
 }
 
 Layout.defaultProps = {
-  title: "Welcome to DevSpace",
+  title: "Codersbay",
   keywords: "development, coding, programming",
   description: "the best info and news in development",
 };

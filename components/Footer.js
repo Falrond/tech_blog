@@ -6,8 +6,7 @@ export default function Footer() {
     <footer className="footer footer-center p-4 bg-neutral text-base-content">
       <div>
         <p>
-          Copyright © {getYear} - All right reserved by Coding
-          <span className="text-accent">Bay</span>
+          Copyright © {getYear} - Wszystkie prawa zastrzeżone przez codersbay
         </p>
       </div>
     </footer>

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function CategoryList({ categories }) {
   return (
     <div className="dropdown dropdown-end">
-      <label tabIndex="0" className="btn m-1">
+      <label tabIndex="0" className="btn">
         Kategorie
       </label>
       <ul
@@ -14,7 +14,7 @@ export default function CategoryList({ categories }) {
           //   e.target.parentNode.parentNode.style.visibility = "hidden";
         }}
         tabIndex="0"
-        className="dropdown-content menu  p-2 text-secondary-content shadow bg-neutral rounded-box w-52"
+        className="dropdown-content menu p-2 text-secondary-content shadow bg-neutral rounded-box w-52"
       >
         {categories.map((category, index) => (
           <Link key={index} href={`/blog/category/${category.toLowerCase()}`}>

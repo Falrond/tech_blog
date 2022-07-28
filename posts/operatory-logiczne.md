@@ -8,15 +8,99 @@ markdown:
 absolute_image_path: falseMarkdown All in One
 ---
 
-Logika boolowska jest gałęzią informatyki, która używa wartości `true` i `false` to rozwiązywania złożonych problemów logicznych. Operatory logiczne to `AND`, `OR` i `NOT`. Przyjrzyjmy się dwóm przykładom:
+Logika boolowska jest gałęzią informatyki, która używa wartości `true` i `false` do rozwiązywania złożonych problemów logicznych. Operatory logiczne to `AND`, `OR` i `NOT`. Przyjrzyjmy się dwóm przykładom:
 
 ```js
 const a = "Ala nakarmiła kota";
 const b = "Ala ma kota";
 ```
 
-Są to zmienne logiczne, które mogą być prawdą albo fałszem. Używając operatora `AND` możemy połączyć obie te zmienne i uzyskać wynik w postaci `true` albo `false` w zależności od tego czy składowe pomiędzy operatorem `AND` bedą prawdziwe czy fałszywe.
+Są to zmienne logiczne, które mogą być prawdą albo fałszem. Używając operatora `AND` możemy połączyć obie te zmienne i uzyskać wynik w postaci `true` albo `false` w zależności od tego czy składowe pomiędzy operatorem `AND` będą prawdziwe czy fałszywe.
 
 <p align="center">
-<img src="https://lh3.googleusercontent.com/Nd3E3TsKzlBMz7QC1068QeN14zwaSB9WeLwMPBEH50FTEgZubwAHQf0Wv0XAJGyjRtJn44h6JMv1AjtJ4o0GBqJ0LkRx7x-6TS5cp0D2RrNJpXMEqELz8rJ9oDhCPlmCc_Hl0uW263Q3broeeKOUKW4UMkg6WgMXBo6EXVh5Y9Mm7CHkYtNfQrEfj7IpRVuXGK1d3CEQqJ0UGhk_Hb1c_v-jaw6_Wj6ul_8VEkzSvF6bCzDTuGjOpzpLovhEnoqwEErZUVxg4fXWP-Yz5Hx4KHKFRtZ1uH17DP4vBgXsDnOSjiYNLJY6quI-XGBxEFsYf1Yvkhg-po9LHQ0v-OjRHNEZfmBXm-tNHnxTZRyOULm-6E53eieJzRbgY2pcR6774vSmgfF-_4ZANwDvUN2aNUqzm2y2h6dO_3c99T5TjvnTG5tYzcYHS7dOc9BiGtOnSOrm8Cst1naVImkI-PPtGUVKS7vWf1mz926fpEYWPSdogR8kYiEEyKqnVI3ueOq4QOze8WkS2cSgm3N4eKHpGMbk6t6CBWCZ1s2CNMfMNh2aU77ltBTSSTpPcZBAUu1Q5Qjrt6nwWNDJMZr72J9b3KJwBG0y40Y4_JO3XJoH3Zsflh5knemyaaJOO4hS-7wQMB_kQdFNBD1rIq8UhyaiDXoqezEltaggnbF4SoOfOGN4tKUInbwf_i83qqDab3N-i6YwO7kGdn_2qdjVscqmVxbz_tcbpAEGbmOvu2L6l-CaKa7kXXj54xB05mi5S6QeldB9VJqGH4wI9bIDTbNxaefQWVCz8IY0T6hU=w319-h306-no?authuser=0"/>
+<img src="https://lh3.googleusercontent.com/QbUCj9iLOcn6-Jt5UEDCS0aEL6yTB8etZ6Uy8yQxxN6zzLYL2RypDlT4vlPJxtpl_iuMetYRngqPsfI_z3VtVPQdEuUvecRgZmFDSpj8NL_DbjLIJVMDpSwx7OwMFZ2yjCaMHQOhfQ=w2400">
 </p>
+
+Tabela przedstawia możliwe wartości dla każdej ze zmiennych oraz wynik jaki zwróci operator `AND`. Możemy odczytać, że wartość `true` dla obu zmiennych zwróci `true` dla operacji. Dla każdej innej sytuacji wynik `A AND B` będzie `false`.
+
+Operator `OR` działa odwrotnie. Wynikiem operacji będzie `true` jeżeli przynajmniej jedna zmienna będzie miała wartość `true`.
+
+Na sam koniec został operator `NOT`, który zamienia wartość `true` na `false` i odwrotnie. Jeżeli używamy go z wartościami `non-boolean` zwraca `false` jeśli pojedyńczy operand (zmienna) może być przekształcony na `true`, w przeciwnym razie zwraca `true`. Przejdźmy do przykładów:
+
+```js
+const age = 16;
+
+A: age is greater or equal 20 // false
+B: age is less than 30 // true
+
+A AND B // false
+A OR B // true
+!A AND B // true
+A OR !B // false
+!A // true
+```
+
+Zobaczmy zatem jak wyglądają operatory logiczne w JavaScript. Na początek stwórzmy zmienne:
+
+```js
+const hasDriversLicense = true; //A
+const hasGoodVision = true; //B
+
+console.log(hasDriversLicense && hasGoodVision); //true
+```
+
+Rezultatem operacji logicznej jest `true`, ponieważ obie zmienne, również mają wartość `true`.
+
+```js
+const hasDriversLicense = true; //A
+const hasGoodVision = false; //B
+
+console.log(hasDriversLicense && hasGoodVision); //false
+```
+
+Jeżeli jedna składowa ma wartość `false` to wynik całej operacj logicznej również będzie `false`. Zobaczmy jak to będzie wyglądało z operatorem `OR`.
+
+```js
+const hasDriversLicense = true; //A
+const hasGoodVision = false; //B
+
+console.log(hasDriversLicense || hasGoodVision); //true
+```
+
+Jeżeli chociaż jedna składowa ma wartość `true`, to całość wyrażenia będzie `true`. Operator `NOT` możemy zastosowac w nastepujący sposób:
+
+```js
+const hasDriversLicense = true; //A
+!hasDriversLicense;
+console.log(hasDriversLicense); //false
+```
+
+Wartość wyrażenia możemy wykorzystać do warunkowego wykonania operacji:
+
+```js
+const hasDriversLicense = true;
+const hasGoodVision = true;
+
+if (hasDriversLicense && hasGoodVision) {
+  console.log("Jesteś w stanie prowadzić auto");
+} else {
+  console.log("Ktoś inny powinien prowadzić auto");
+}
+```
+
+Możemy wykorzystac kilka operatorów w jednej operacji:
+
+```js
+const isTired = true;
+console.log(hasDriversLicense || hasGoodVision || isTired); // true
+```
+
+```js
+const isTired = false;
+console.log(hasDriversLicense && hasGoodVision && isTired); // false
+```
+
+```js
+const isTired = false;
+console.log(hasDriversLicense && hasGoodVision && !isTired); // true
+```

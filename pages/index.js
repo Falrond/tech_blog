@@ -7,7 +7,7 @@ export default function HomePage({ posts }) {
   console.log(posts);
   return (
     <Layout>
-      <h1 className="text-5xl py-5 border-b-2 border-accent">
+      <h1 className="sm:text-5xl text-4xl py-5 border-b-2 border-accent mx-4 sm:mx-0">
         Najnowsze wpisy
       </h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
